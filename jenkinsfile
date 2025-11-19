@@ -1,11 +1,6 @@
 pipeline {
     agent any
 
-    tools {
-        // EXACTEMENT le nom défini dans Global Tool Configuration
-        maven 'Maven_3_9'
-    }
-
     stages {
         stage('Build & Package') {
             steps {

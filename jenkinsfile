@@ -9,14 +9,7 @@ pipeline {
     stages {
         stage('Build & Package') {
             steps {
-                script {
-                    def mvnCmd = 'mvn clean package -DskipTests'
-                    if (isUnix()) {
-                        sh mvnCmd
-                    } else {
-                        bat mvnCmd
-                    }
-                }
+                sh 'mvn clean package -DskipTests'
             }
         }
     }
